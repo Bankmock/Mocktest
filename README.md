@@ -1,2 +1,0 @@
-# Mocktest
-Banking mocktest 
