@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz - English and Hindi</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+</head>
+<body>
+    
+ <form id="regForm" action="r.html">
+
+            <table>
+            
+                <tr>
+                  <td><span class="secgen currclass" id="sec-e0"><b>English</b></span></td>
+     
+      <td>
+    <b><div id="timer">Left Time: 20:00</div></b>
+    </td>
+   <td>
+ <a id="nextButton" onclick=""> Next Section </a>
+  </td>
+  <td>
+  <select id="languageSelect" onchange="changeLanguage()">
+ <option value="en">English</option> <option value="hi">हिन्दी</option>
+    </select>
+  </td>
+                    </tr>
+             
+            </table>
+         
+         <b> <p style="font-size: 20px; " >Quetion:  <span id="questionNumber">0</span>/30</p </p> </b>
+          <hr>
+          
+ 
+   <article class="cardq">
+
+
+ 
+             <p id="question">
+                Directions (71-78): Read the following passage and answer the following questions based on the given passage. Some of the words are highlighted which would help you to answer some of the questions given.<br>For Years, World-Wide Organisations Have is increasingly excited about the prospect of a cloud-based future. As the dream becomes an ever closer reality for many kinds of business and, forrester predicted that enterprise spending on cloud services is set to surge IDC also predicted that global spending on public cloud services and infrastructure would not be $ 210bn in 2019, An Increase of 24% from 2018. But one Obstacle Stands Create Friqtion and introduce Risk: The Process of Migration As all indications point to a massive shift, it is more important than ever that the transition from on-premises to cloud is as Risk Free as Possible In today's climate any loss or disruption to Data Can have a Huge Business Impact. It's a Complex Process, is frequently underestimated and many organisations you're not 'like that can go wrong that can impact the Business Organisations across the globe has found the cloud to be an ideal place to run Modern Data applications Due to BIG Data's Elastic Resource requirements Furthermore, with the lack of data for most company today they have beened to be adopt a cloud-first Strategy to ensure business operations are accessible for a range of employees. The Cloud Offers Great Promise for Developers Especially, As It Can Increase The Speed AT Which They Develop Software Features and Increase The resilience of applications once They are deployed - Along with enhanced security through the use of multiple server locations. With all this considered, it is no surprise that 42% of uk businesses leverage some kind of cloud service, According to Eurostat. However, all the perceived benefits of leveraging the cloud are redundant if organisations Come up up up up progress barriers to accessing cloud services. Cloud-based Data Pipelines Still Suffer from Complexity Challenges at the moment, Along with the Lack of Visibility Into Cost And Resource Usage A Application and User Level The answer to this is automation fueled by robust machine learning training model and artificial intelligence. These Concepts and the Tools That Enable Them Can Determine The Prerequisites of Cloud Infrastructure, Application Dependencies, The Appropriate Target Cloud Instance Profiles, And Provide Troubleshooting in Real-Time To summarise, the promise of the cloud has been created a sense of excitement Amongst Enterprises, However, they have proceeded to go full steam Ahead Into Adopting a Cloud Service, Without Sufficient Data to Ensure Performance Service Level Agreements (SLA). <br>
+              71.How can we tackle the risks associated with the
+process of migration? </p>
+    <div id="options">
+       <div class="option-wrapper"> A. <input type="radio" name="option" value="0">
+        <label>  By ensuring that organizations only migrate the
+ apps to the cloud that will thrive in the cloud. </label></div>
+        
+  
+<div class="option-wrapper">  B. <input type="radio" name="option" value="1">
+     <label> The surge in the investment in the cloud
+ technology. </label></div>
+      
+     <div class="option-wrapper">  C. <input   type="radio" name="optionr" value="2">
+        <label> The use of predictive power of Artificial
+ Intelligence. </label></div>
+       
+   
+       
+          <div class="option-wrapper">  D. <input   type="radio" name="optionr" value="3">
+        <label> The transition from on-premises to cloud </label></div>
+       
+    
+    
+         <div class="option-wrapper">  E. <input   type="radio" name="optionr" value="4">
+        <label> none of these </label></div>
+       
+    
+    
+  </article>
+     <br>
+           </div>    
+		  <div id="button-holder" style="display: block;">
+		     <a> <span id="clear" onclick="showPreviousQuestion()" style="font-size: 23px;"> Previous
+                   </span>
+                 </a>
+				 <a>  
+                   <span id="brand" style="font-size: 22px;  border:1px solid #A9D0F5; ">
+                     Bakers Mock
+                   </span>
+                 </a
+                 <a>  
+                   <span id="next" onclick="saveAndNext()" style="font-size: 23px;">
+                     Save&amp;Next
+                   </span>
+                 </a> 
+      </div>
+             
+              
+		 </form>
+ 
+    
+    
+    <script src="main.js"></script>
+    <script src="timer.js"></script>
+    
+</body>
+</html>
