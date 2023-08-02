@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Quiz - English and Hindi</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+</head>
+<body>
+    
+ <form id="regForm" action="r.html">
+
+            <table>
+            
+                <tr>
+                  <td><span class="secgen currclass" id="sec-e0"><b>English</b></span></td>
+     
+      <td>
+    <b><div id="timer">Left Time: 20:00</div></b>
+    </td>
+   <td>
+ <a id="nextButton" onclick=""> Next Section </a>
+  </td>
+  <td>
+  <select id="languageSelect" onchange="changeLanguage()" disabled>
+ <option value="en">English</option> <option value="hi">हिन्दी</option>
+    </select>
+  </td>
+                    </tr>
+             
+            </table>
+         
+         <b> <p style="font-size: 20px; " >Quetion:  <span id="questionNumber">0</span>/30</p </p> </b>
+          <hr>
+          
+ 
+   <article class="cardq">
+
+
+ 
+             <p id="question">
+                Directions: Read the given passage carefully and answer the following questions. Certain parts have been highlighted to help answer the questions.<br>Every year, around one million people die of mosquito-borne diseases according to the World Health Organization (WHO). This is why mosquitoes are considered one of the deadliest living creatures on the planet — not because they are lethal themselves, but because many of the viruses and parasites they transmit are.<br> In the absence of an effective vaccine for dengue fever, Zika fever, chikungunya and other mosquito-borne diseases, researchers have developed genetic strategies to reduce mosquito populations. One such strategy involves the release into the wild of genetically modified (GM) mosquitoes that express a lethal gene— a strategy believed to have little impact on the overall DNA of wild populations of mosquitoes.<br> The transfer of new genes from GM organisms to wild or domesticated non-GM populations is a key criticism of GM crops like soybean and corn. There are concerns that the introduction of GM genes into non-target species could have negative consequences for both human and environmental health.<br> Oxitec, a company that spun out of research at Oxford University in the early 2000s, developed and trademarked GM Friendly™ mosquitoes (also known as strain OX513A of Aedes aegypti). These male GM mosquitoes have what the company describes as a “self-limiting” gene, which means that when these so-called friendly mosquitoes’ mate, their offspring inherit the self-limiting gene which is supposed to prevent them surviving into adulthood. In theory, when these mosquitoes are released in high numbers, a dramatic reduction in the mosquito population should follow. According to research published by Oxitec researchers in 2015, field trials involving recurring releases of Friendly™ mosquitoes demonstrated a reduction of nearly 95 per cent of target populations in Brazil. In these field trials, experiments were not performed to assess whether GM mosquitoes might persist in the wild. <br> A recent study from the Powell lab at Yale University has since confirmed that some of the offspring of the GM mosquitoes didn’t succumb to the self-limiting lethal gene and survived to adulthood. They were able to breed with native mosquitoes and thereby introduce some of their geneinto the wild population.<br> Meanwhile, the impact of mosquitoes carrying these new genes remains largely unknown. One significant worry is that a new breed of mosquito might emerge that is more difficult to control. These new genes could also  alter evolutionary pressures on viruses carried by mosquitoes, like dengue fever, in unpredictable ways. This includes potentially increasing their virulence or changing their host-insect interactions. These are hypothetical risks that have been raised by scientists, and reflect the need for further study. <br> Why are mosquitoes considered as one of the deadliest living creatures on earth? </p>
+    <div id="options">
+       <div class="option-wrapper"> A. <input type="radio" name="option" value="0">
+        <label>  Capability to transmit life threatening diseases  </label></div>
+        
+  
+<div class="option-wrapper">  B. <input type="radio" name="option" value="1">
+     <label> Mosquito bites cause fatal reactions in human beings  </label></div>
+      
+     <div class="option-wrapper">  C. <input   type="radio" name="optionr" value="2">
+        <label> Mosquitoes cannot be killed easily  </label></div>
+       
+   
+       
+          <div class="option-wrapper">  D. <input   type="radio" name="optionr" value="3">
+        <label> Both (a) and (c)  </label></div>
+       
+    
+    
+         <div class="option-wrapper">  E. <input   type="radio" name="optionr" value="4">
+        <label> None of the above </label></div>
+       
+    
+    
+  </article>
+    <br>
+           </div>    
+		  <div id="button-holder" style="display: block;">
+		     <a> <span id="clear" onclick="showPreviousQuestion()" style="font-size: 23px;"> Previous
+                   </span>
+                 </a>
+				
+                 <a>  
+                   <span id="next" onclick="saveAndNext()" style="font-size: 23px;">
+                     Save&amp;Next
+                   </span>
+                 </a> 
+      </div>
+             
+              
+		 </form>
+ 
+    <script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    function incrementCount() {
+      var countElement = document.getElementById("count");
+      var currentCount = parseInt(countElement.innerText);
+
+      if (currentCount < 30) {
+        currentCount++;
+        countElement.innerText = currentCount;
+      }
+    }
+
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    <script src="main.js"></script>
+    <script src="timer.js"></script>
+    
+</body>
+</html>

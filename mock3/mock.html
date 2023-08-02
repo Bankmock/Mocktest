@@ -1,0 +1,497 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+    #progress-bar {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin-left: 26%;
+    }
+    
+    #progress-bar svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+    }
+    
+    #progress-bar .circle-background {
+      fill: none;
+      stroke: green;
+      stroke-width: 10;
+    }
+    
+    #progress-bar .circle-progress {
+      fill: none;
+      stroke: white;
+      stroke-width: 10;
+      
+      stroke-dasharray: 0, 251.2; /* Sets the initial progress to 0 */
+      transition: stroke-dasharray 1s ease;
+    }
+    
+    #progress-bar .score-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, sans-serif;
+      text-anchor: middle;
+    }
+  </style>
+</head>
+<body>
+  <div id="progress-bar">
+    <svg viewBox="0 0 100 100">
+      <circle class="circle-background" cx="50" cy="50" r="40" />
+      <circle class="circle-progress" cx="50" cy="50" r="40" />
+    </svg>
+    <div class="score-card">0%</div>
+  </div>
+  
+  <script>
+      setInterval(function() {
+        // Code to be executed every 2 seconds
+       
+    function getProgress() {
+      // Retrieve progress from ID or local storage
+      // Example: Retrieve from an input field with ID 'progress-input'
+      const inputElement = document.getElementById('progress-input');
+      if (inputElement) {
+        const progress = parseFloat(inputElement.value);
+        return isNaN(progress) ? 0 : progress;
+      }
+      
+      // Retrieve from local storage
+      const storedProgress = localStorage.getItem('progress');
+      return storedProgress ? parseFloat(storedProgress) : 0;
+    }
+    
+    function setProgress(progress) {
+      const circle = document.querySelector('#progress-bar .circle-progress');
+      const scoreCard = document.querySelector('#progress-bar .score-card');
+      const radius = circle.r.baseVal.value;
+      const circumference = radius * 2 * Math.PI;
+      const offset = circumference - progress / 100 * circumference;
+      
+      circle.style.strokeDasharray = `${offset}, ${circumference}`;
+      scoreCard.textContent = `${progress}%`;
+    }
+    
+    // Example usage:
+    
+    const progressValue = parseFloat(score3);
+    setProgress(progressValue); 
+    // Sets progress based on retrieved value
+    
+    
+   
+      }, 2000);
+    
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+  <title>Exam Subjects</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+    <link rel="stylesheet" type="text/css" href="allsign.css">
+    
+    
+     <style>
+    .right-sign {
+      color: green;
+    }
+
+    .wrong-sign {
+      color: red;
+    }
+
+    .skip-sign {
+      color: orange;
+    }
+  </style>
+  
+  <style>
+      
+      
+   html *
+{
+-webkit-user-select:none !important;
+-moz-user-select: -moz-none !important;
+-ms-user-select: none !important;
+user-select: none !important;
+}
+      
+      
+      body {
+          
+         background-color: #f5f5f5;
+          
+      }
+      
+      
+      .card-container1 {
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+      
+      .card1 {
+      background-color: white;
+      border-radius: 8px;
+      
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      height: 84px;
+      width: 124px;
+      float: Left;
+      margin-Left: 13px;
+    overflow-y: hidden;
+     overflow-x: hidden;
+    }
+      
+
+ 
+
+    .green-element {
+      background-color: rgba(0, 128, 0, 0.5); /* Green */
+      color: green;
+      
+          }
+
+    .brown-element {
+      background-color: rgba(139, 69, 19, 0.5); /* Brown */
+      color: brown;    }
+
+    .blue-element {
+      background-color: rgba(0, 0, 255, 0.5); /* Blue */
+      
+      color: blue;    }
+
+    
+
+
+
+
+    .custom-element {
+      background-color: rgba(244, 113, 16, 0.73); /* #F47110BB */
+    }
+    
+    
+    
+  
+  
+  .card-container2 {
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .card2 {
+      display: inline-block;
+      width: 140px;
+      height: 84px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+      margin-bottom: 20px;
+      
+      
+      
+    }
+
+    .card2 h2 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+
+    .card2 p {
+      margin-bottom: 10px;
+    }
+  
+
+    
+    
+    .card-container {
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    .card {
+      display: inline-block;
+      width: 200px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+     margin-right: 10%;
+      
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+
+#score3 {
+        font-size: 33px;
+    }
+     
+#rank3 {
+        font-size: 33px;
+    }
+     
+
+
+
+#tcorrectCount3 {
+        font-size: 33px;
+    }
+     #twrongCount3 {
+        font-size: 30px;
+   }
+    #tskiped3 {
+        font-size: 30px;
+    }
+
+
+#tcorrectanser3 {
+font-size: 30px;
+    }
+  
+    #ecorrectCount3 {
+        font-size: 33px;
+    }
+     #ewrongCount3 {
+        font-size: 30px;
+   }
+    #eskiped3 {
+        font-size: 30px;
+    }
+    
+    
+    
+    #rcorrectCount3 {
+        font-size: 33px;
+    }
+     #rwrongCount3 {
+        font-size: 30px;
+   }
+    #rskiped3 {
+        font-size: 30px;
+    }
+    
+    #qcorrectCount3 {
+        font-size: 33px;
+    }
+     #qwrongCount3 {
+        font-size: 30px;
+   }
+    #qskiped3 {
+        font-size: 30px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+    
+    <h2>Bankers Mock </h2>
+    
+    <div class="card-container2">
+        
+   <div class="card2 green-element">
+       Score <i class="fas fa-star score-sign"></i><br>
+    <p><span id="score3"></span>/100</p>
+   
+  </div>
+  
+
+     
+   <div class="card2 green-element">
+      Rank<i class="fas fa-trophy ranking-sign"></i><br>
+    <p><span id="rank3"></span>/010</p>
+   
+  </div>
+     
+   
+ 
+  
+  </div>
+    
+    <h3>Total Analysis</h3>
+    
+    
+   
+    
+    
+    
+    <div class="card-container1">
+        
+   <div class="card1 green-element">
+       Correct<i class="fas fa-check-circle right-sign"></i><br>
+    <p><span id="tcorrectCount3"></span>/100</p>
+   
+  </div>
+
+  <div class="card1 brown-element ">
+      Wrong<i class="fas fa-times-circle wrong-sign"></i><br>
+      <p><span id="twrongCount3"></span>/100</p>
+  </div>
+
+  <div class="card1 blue-element ">
+   Skiped<i class="fas fa-question-circle skip-sign"></i>
+   <p><span id="tskiped3"></span>/100</p>
+  </div>
+  
+  <div class="card1 custom-element ">
+   
+   <p><span id="tcorrectanser3"></span>/100</p>
+  </div>
+  
+  </div>
+   <h3>Section</h3>
+   
+    
+    <div class="card-container">
+  <div class="card">
+    <h2 >English</h2>
+    <hr>
+  
+    <p>Correct ! : <span id="ecorrectCount3">30</span>/30</p>
+    <p>Wrong ! : <span id="ewrongCount3"></span>/30</p>
+    <p>Skiped ! : <span id="eskiped3">30</span>/30</p>
+  </div>
+
+  <div class="card">
+    <h2>Quantitative Aptitude</h2>
+     <hr>
+    
+    <p>Correct ! : <span id="qcorrectCount3">30</span>/30</p>
+    <p>Wrong ! : <span id="qwrongCount3">30</span>/30</p>
+    <p>Skipped ! : <span id="qskiped3">30</span>/30</p>
+  </div>
+
+  <div class="card">
+    <h2>Reasoning</h2>
+      <hr>
+    
+    <p>Correct ! : <span id="rcorrectCount3">30</span>/30</p>
+    <p>Wrong ! : <span id="rwrongCount3">30</span>/30</p>
+    <p>Skiped ! : <span id="rskiped3">30</span>/30</p>
+  </div>
+  </div>
+  
+  
+  <br>
+  <br>
+  
+  <script>
+      
+      
+      
+      
+      
+      
+      
+      
+      let ecorrectCount3 = parseFloat(localStorage.getItem('ecorrectCount3'), 10);
+      
+ let qcorrectCount3 = parseFloat(localStorage.getItem('qcorrectCount3'), 10);
+ let  rcorrectCount3 = parseFloat(localStorage.getItem('rcorrectCount3'), 10);
+ 
+       let tcorrectCount3 = (ecorrectCount3) + (qcorrectCount3) + (rcorrectCount3);
+       
+document.getElementById("tcorrectCount3").innerHTML = tcorrectCount3;
+
+var score3 = tcorrectCount3;
+document.getElementById("score3").innerHTML = score3;
+    
+
+ 
+let ewrongCount3 = parseFloat(localStorage.getItem('ewrongCount3'), 10);
+      
+ let qwrongCount3 = parseFloat(localStorage.getItem('qwrongCount3'), 10);
+ 
+ let  rwrongCount3 = parseFloat(localStorage.getItem('rwrongCount3'), 10);
+ 
+       let twrongCount3 = (ewrongCount3) + (qwrongCount3) + (rwrongCount3);
+ document.getElementById("twrongCount3").innerHTML = twrongCount3;
+ 
+ let  tcorrectanser3  = (tcorrectCount3) + (twrongCount3);
+      document.getElementById("tcorrectanser3").innerHTML = tcorrectanser3;
+
+let eskiped3 = parseFloat(localStorage.getItem('eskiped3'), 10);
+      
+ let qskiped3 = parseFloat(localStorage.getItem('qskiped3'), 10);
+ 
+ let  rskiped3 = parseFloat(localStorage.getItem('rskiped3'), 10);
+ 
+       let tskiped3 = (eskiped3) + (qskiped3) + (rskiped3);
+ document.getElementById("tskiped3").innerHTML = tskiped3;
+
+
+// english
+
+
+
+
+document.getElementById("ecorrectCount3").innerHTML = ecorrectCount3;
+ document.getElementById("ewrongCount3").innerHTML = ewrongCount3;
+
+ document.getElementById("eskiped3").innerHTML = eskiped3;
+
+
+
+
+// quant 
+
+
+
+ document.getElementById("qcorrectCount3").innerHTML = qcorrectCount3;
+ document.getElementById("qwrongCount3").innerHTML = qwrongCount3;
+
+ document.getElementById("qskiped3").innerHTML = qskiped3;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ //resoning
+ 
+ 
+ document.getElementById("rcorrectCount3").innerHTML = rcorrectCount3;
+ document.getElementById("rwrongCount3").innerHTML = rwrongCount3;
+
+ document.getElementById("rskiped3").innerHTML = rskiped3;
+ 
+</script>
+
+
+</body>
+</html>
+
